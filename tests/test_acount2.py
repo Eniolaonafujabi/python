@@ -41,4 +41,4 @@ class MyTestCase(unittest.TestCase):
         janetAccount.deposit(50000)
         self.assertEqual(50000,janetAccount.check_balance())
         janetAccount.withdraw(-10000)
-        self.assertEqual(40000,janetAccount.check_balance())
+        self.assertEqual(50000,janetAccount.check_balance())

@@ -39,8 +39,6 @@ def test_that_i_can_not_withdraw_more_than_my_balance():
 
 def test_that_you_can_not_withdraw_negative_amount_from_balance():
     janetAccount = Account()
-    assert (0, janetAccount.check_balance())
     janetAccount.deposit(50000)
-    assert (50000, janetAccount.check_balance())
     janetAccount.withdraw(-10000)
-    assert (40000, janetAccount.check_balance())
+    assert (50000, janetAccount.check_balance())
