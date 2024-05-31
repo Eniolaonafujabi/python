@@ -32,5 +32,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(0,eniolaAccount.check_balance())
         eniolaAccount.deposit(5000)
         self.assertEqual(5000,eniolaAccount.check_balance())
-        eniolaAccount.withdraw(-4000)
+        eniolaAccount.withdraw(6000)
         self.assertEqual(5000,eniolaAccount.check_balance())
+
+    def test_that_you_can_not_withdraw_negative_amount_from_balance(self):
+        janetAccount = Account()
+        self.assertEqual(0,janetAccount.check_balance())
+        janetAccount.deposit(50000)
+        self.assertEqual(50000,janetAccount.check_balance())
+        janetAccount.withdraw(-10000)
+        self.assertEqual(40000,janetAccount.check_balance())
